@@ -1,32 +1,42 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div>
+    <el-container>
+      <el-header>
+        <Header />
+      </el-header>
+      <el-main> </el-main>
+    </el-container>
   </div>
 </template>
 
+<script>
+import Header from "@/components/Header/index.vue";
+
+export default {
+  name: "app",
+  components: {
+    Header,
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-#nav {
-  padding: 30px;
+html,
+body {
+  width: 100%;
+  height: 100%;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+div {
+  width: 100%;
+  height: 100%;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.el-container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
 }
 </style>
